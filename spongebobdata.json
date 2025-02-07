@@ -1,0 +1,10 @@
+[{
+  "Weekly Task": ["Reading", "Jellyfishing", "Blowing Bubbles", "Singing", "Working"],
+  "Hours Attempted": [5, 6, 4, 5, 3]
+},
+
+{
+  "Season": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+  "Episodes": [20, 20, 20, 20, 20, 26, 26, 26, 26, 11, 26, 25, 26]
+}
+]
