@@ -1,40 +1,9 @@
 import streamlit as st
-#import json
-infile = open("spongebobdata.json")
+import json
+infile = open("data/spongebobdata.json")
 
 st.header("Data About Me!")
-#spongeData = json.load(infile)
-spongeData = [{
-  "Weekly Task": ["Reading", "Jellyfishing", "Blowing Bubbles", "Singing", "Working"],
-  "Hours Attempted": [5, 6, 4, 5, 3]
-},
-
-{
-  "Season": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-  "Episodes": [20, 20, 20, 20, 20, 26, 26, 26, 26, 11, 26, 25, 26]
-},
-
-{
-  "Months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-  "Searches": [63, 62, 63, 68, 68, 92, 71, 63, 60, 54, 53, 55]
-},
-{
-    "Months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    "Searches": [54, 53, 57, 58, 59, 57, 56, 52, 50, 50, 53, 52]
-  },
-{
-    "Months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    "Searches": [56, 54, 55, 59, 61, 57, 62, 56, 52, 57, 54, 57]
-  },
-{
-    "Months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    "Searches": [61, 61, 57, 58, 58, 59, 60, 59, 56, 57, 51, 52]
-  },
-{
-    "Months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    "Searches": [55, 65, 59, 60, 62, 59, 60, 64, 63, 74, 60, 60]
-  }
-]
+spongeData = json.load(infile)
 
 if "data" not in st.session_state:
     st.session_state["data"] = spongeData
