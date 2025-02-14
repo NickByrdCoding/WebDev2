@@ -10,7 +10,7 @@ if "data" not in st.session_state:
 
 
 
-tab1, tab2, tab3 = st.tabs(["About the Show", "About Spongebob", "Viewership Over Time"])
+tab1, tab2, tab3 = st.tabs(["About the Show", "About Spongebob", "Searches Over Time"])
 
 
 with tab2:
@@ -35,6 +35,8 @@ with tab2:
     working = st.slider("Working", 0, 30, st.session_state["data"][0]["Hours Attempted"][4])
     st.session_state["data"][0]["Hours Attempted"][4] = working
   st.caption("Due to saving data into **st.session_state**, Streamlit remembers previous changes made to the graph even when updated again! If the data wasn't stored in **st.session_state**, updating the chart would cause previous changes to be reset.")
+  st.subheader("Weekly Work:")
+  st.write("This bar graph allows Spongebob to display how much time he spent on certain tasks throughout the week. Although there are default values, Spongebob is able to change these values straight from the Streamlit app!")
 
 with tab1:
   st.line_chart(data = spongeData[1], x = "Season", y = "Episodes")
@@ -53,7 +55,7 @@ with tab3:
         "2024",
     ],
 )
-  st.subheader(f"Viewership in: {year}")
+  st.subheader(f"Searches in: {year}")
   if year == "2020":
     st.line_chart(data = st.session_state["data"][2], x = "Months", y = "Searches", width=500, height=500)
   if year == "2021":
@@ -65,4 +67,5 @@ with tab3:
   elif year == "2024":
     st.line_chart(data = st.session_state["data"][6], x = "Months", y = "Searches", width=500, height=500)
   st.caption("This is a **dynamic** graph as it can be changed by user input. This graph displays data from a **.json()** file ^")
-
+  st.subheader("How Trendy is Spongebob?")
+  st.write("The line graph displays the amount of searches for SpongeBob SquarePants in different years. The x-axis represents the month of the year, and the y-axis indicates the amount of searches relative to a max of 100\% (the most searches ever for Spongebob in one month)")
